@@ -16,11 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-b from-gray-900 to-blue-900 text-white min-h-screen`}>
+      <body className={`${inter.className} bg-gradient-to-b from-gray-900 to-blue-900 text-white min-h-screen flex flex-col`}>
         <header className="p-4 text-center">
           <h1 className="text-3xl font-bold">NASA API Navigator</h1>
         </header>
-        <main>{children}</main>
+        <main className="flex-grow">{children}</main>
         <footer className="p-4 text-center text-sm">
           © {new Date().getFullYear()} NASA API Navigator
         </footer>

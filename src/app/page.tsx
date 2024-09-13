@@ -50,10 +50,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      <footer className="mt-16 text-center text-sm text-blue-200 relative z-10">
-        © {new Date().getFullYear()} NASA. For educational purposes only.
-      </footer>
     </main>
   );
 }
