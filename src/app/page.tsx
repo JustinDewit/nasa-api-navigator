@@ -1,49 +1,58 @@
 import Image from "next/image";
 
+const missions = [
+  { name: "James Webb Space Telescope", image: "webb.jpg", description: "Observing the universe's first galaxies" },
+  { name: "Mars 2020 Perseverance", image: "perseverance.jpg", description: "Seeking signs of ancient microbial life on Mars" },
+  { name: "Artemis Program", image: "artemis.jpg", description: "Returning humans to the Moon by 2024" },
+];
+
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center p-8">
-      <header className="mb-8 text-center">
+    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-blue-900 text-white flex flex-col items-center justify-center p-8 overflow-hidden relative">
+      <div className="absolute inset-0 overflow-hidden">
+        {[...Array(50)].map((_, i) => (
+          <div key={i} className="star" style={{
+            left: `${Math.random() * 100}%`,
+            top: `${Math.random() * 100}%`,
+            animationDelay: `${Math.random() * 5}s`
+          }}></div>
+        ))}
+      </div>
+
+      <header className="mb-12 text-center relative z-10">
         <Image
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          src="/nasa-logo.png"
+          alt="NASA Logo"
+          width={100}
+          height={100}
+          className="mx-auto mb-4"
         />
-        <h1 className="mt-4 text-3xl font-bold">Welcome to My Next.js App</h1>
+        <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-red-500">
+          NASA: Exploring the Unknown
+        </h1>
+        <p className="text-xl text-blue-200">Discover the wonders of space exploration</p>
       </header>
 
-      <section className="max-w-2xl text-center">
-        <p className="mb-8 text-xl">
-          This is a simple layout for your Next.js application. You can start building your project from here.
-        </p>
-
-        <div className="grid grid-cols-2 gap-4">
-          <a
-            href="https://nextjs.org/docs"
-            className="p-4 border rounded-lg hover:bg-gray-100 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className="text-xl font-semibold mb-2">Documentation</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn"
-            className="p-4 border rounded-lg hover:bg-gray-100 transition-colors"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2 className="text-xl font-semibold mb-2">Learn</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+      <section className="max-w-4xl text-center relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {missions.map((mission) => (
+            <div key={mission.name} className="bg-white bg-opacity-10 p-6 rounded-xl backdrop-filter backdrop-blur-lg hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
+              <Image
+                src={`/${mission.image}`}
+                alt={`${mission.name} Image`}
+                width={200}
+                height={150}
+                className="mx-auto mb-4 rounded-lg"
+              />
+              <h2 className="text-2xl font-semibold mb-2">{mission.name}</h2>
+              <p className="text-blue-200">{mission.description}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      <footer className="mt-8 text-center text-sm text-gray-500">
-        © 2024 My Next.js App. All rights reserved.
+      <footer className="mt-16 text-center text-sm text-blue-200 relative z-10">
+        © {new Date().getFullYear()} NASA. For educational purposes only.
       </footer>
     </main>
   );
