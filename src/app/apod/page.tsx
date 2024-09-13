@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { fetchAPOD } from '../lib/api';
+import { fetchAPOD } from '../../lib/api';
 import Image from 'next/image';
 
 export default function APODPage() {
