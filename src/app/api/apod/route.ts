@@ -1,9 +1,11 @@
 import { NextResponse } from 'next/server';
 
+// API route handler for fetching NASA's Astronomy Picture of the Day (APOD)
 export async function GET() {
   const baseUrl = 'https://api.nasa.gov/planetary/apod';
   const apiKey = process.env.NASA_API_KEY;
 
+  // Check if the API key is available in environment variables
   if (!apiKey) {
     return NextResponse.json({ error: 'API key not found' }, { status: 500 });
   }
@@ -22,3 +24,5 @@ export async function GET() {
     return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
   }
 }
+
+// TODO: Add caching to reduce API calls and improve performance
