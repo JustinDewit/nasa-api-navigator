@@ -25,4 +25,5 @@ export async function GET() {
   }
 }
 
+// TODO: Add more (optional) parameters to the API call (e.g. date, hd, etc.)
 // TODO: Add caching to reduce API calls and improve performance
