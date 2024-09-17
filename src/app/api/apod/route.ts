@@ -10,17 +10,21 @@ export async function GET() {
     return NextResponse.json({ error: 'API key not found' }, { status: 500 });
   }
 
-  const url = `${baseUrl}?api_key=${apiKey}`;
+  const currentDate = new Date().toISOString().split('T')[0];
+  const url = `${baseUrl}?api_key=${apiKey}&date=${currentDate}`;
 
   try {
-    const res = await fetch(url);
-    if (!res.ok) {
-      throw new Error(`Error fetching data: ${res.statusText}`);
-    }
+    const res = await fetch(url, {
+      cache: 'no-store',
+      headers: {
+        'Cache-Control': 'no-cache',
+        'Pragma': 'no-cache'
+      }
+    });
+    
     const data = await res.json();
     return NextResponse.json(data);
   } catch (error) {
-    console.error('Error fetching APOD data:', error);
     return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
   }
 }
