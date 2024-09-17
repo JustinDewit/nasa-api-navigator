@@ -3,9 +3,17 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
 
+type ApodData = {
+  title: string;
+  url: string;
+  date: string;
+  explanation: string;
+  copyright?: string;
+};
+
 export default function ApodPage() {
   // State variables for managing data, loading state, and errors
-  const [data, setData] = useState(null);
+  const [data, setData] = useState<ApodData | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -48,7 +56,7 @@ export default function ApodPage() {
             alt={data.title}
             width={1024}
             height={1024}
-            className="rounded-lg shadow-lg"
+            className="rounded-l shadow-lg"
           />
         </div>
         {/* Description and metadata container */}
