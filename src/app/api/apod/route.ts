@@ -22,10 +22,20 @@ export async function GET() {
       }
     });
     
+    // Add status code check
+    if (!res.ok) {
+      throw new Error(`NASA API responded with status: ${res.status}`);
+    }
+
     const data = await res.json();
     return NextResponse.json(data);
   } catch (error) {
-    return NextResponse.json({ error: 'Failed to fetch data' }, { status: 500 });
+    // Improve error logging and response
+    console.error('Error fetching APOD:', error);
+    return NextResponse.json(
+      { error: 'Failed to fetch data', details: error.message },
+      { status: 500 }
+    );
   }
 }
 
