@@ -18,8 +18,8 @@ export default function ApodPage() {
         }
         return res.json();
       })
-      .then((data) => {
-        setData(data);
+      .then((apiData) => {
+        setData(apiData);
         setIsLoading(false);
       })
       .catch((error) => {
