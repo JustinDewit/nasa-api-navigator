@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Sidebar from "@/components/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,14 +17,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-gradient-to-b from-gray-900 to-blue-900 text-white min-h-screen flex flex-col`}>
-        <header className="p-4 text-center">
-          <h1 className="text-3xl font-bold">NASA API Navigator</h1>
-        </header>
-        <main className="flex-grow">{children}</main>
-        <footer className="p-4 text-center text-sm">
-          © {new Date().getFullYear()} NASA API Navigator
-        </footer>
+      <body className={`${inter.className} flex`}>
+        <Sidebar />
+        <div className="flex-1 bg-gradient-to-b from-gray-900 to-blue-900 text-white min-h-screen">
+          <main className="p-8">{children}</main>
+          <footer className="p-4 text-center text-sm">
+            © {new Date().getFullYear()} NASA API Navigator
+          </footer>
+        </div>
       </body>
     </html>
   );

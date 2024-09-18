@@ -9,20 +9,9 @@ const missions = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-blue-900 text-white flex flex-col items-center justify-center p-8 overflow-hidden relative">
-      {/* Starry background effect */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(50)].map((_, i) => (
-          <div key={i} className="star" style={{
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-            animationDelay: `${Math.random() * 5}s`
-          }}></div>
-        ))}
-      </div>
-
+    <div className="space-y-12">
       {/* Header section with NASA logo and title */}
-      <header className="mb-12 text-center relative z-10">
+      <header className="text-center">
         <Image
           src="/nasa-logo.png"
           alt="NASA Logo"
@@ -37,7 +26,7 @@ export default function Home() {
       </header>
 
       {/* Mission cards section */}
-      <section className="max-w-4xl text-center relative z-10">
+      <section className="max-w-4xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {missions.map((mission) => (
             <div key={mission.name} className="bg-white bg-opacity-10 p-6 rounded-xl backdrop-filter backdrop-blur-lg hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105">
@@ -54,21 +43,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-
-      {/* Link to apod page */}
-      <section className="mt-12 text-center relative z-10">
-        <a href="/apod" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 transform hover:scale-105">
-          Discover Astronomy Picture of the Day
-        </a>
-      </section>
-
-      {/* Link to epic page */}
-      <section className="mt-12 text-center relative z-10">
-        <a href="/epic" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 transform hover:scale-105">
-          Earth Polychromatic Imaging Data
-        </a>
-      </section>
-    </main>
+    </div>
   );
 }
 

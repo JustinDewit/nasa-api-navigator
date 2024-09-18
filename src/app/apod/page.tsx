@@ -37,16 +37,16 @@ export default function ApodPage() {
   }, []);
 
   // Render loading state
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div className="text-center">Loading...</div>;
   
   // Render error state
-  if (error) return <div>Error: {error}</div>;
+  if (error) return <div className="text-center text-red-500">Error: {error}</div>;
   
   // Return null if data is not yet available
   if (!data) return null;
 
   return (
-    <div className="container mx-auto p-4 max-w-6xl">
+    <div className="max-w-6xl mx-auto">
       <h1 className="text-4xl font-bold mb-6 text-center">{data.title}</h1>
       <div className="flex flex-col md:flex-row gap-6">
         {/* Image container */}
@@ -56,7 +56,7 @@ export default function ApodPage() {
             alt={data.title}
             width={1024}
             height={1024}
-            className="rounded-l shadow-lg"
+            className="rounded-lg shadow-lg"
           />
         </div>
         {/* Description and metadata container */}
