@@ -55,10 +55,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Link to Astronomy Picture of the Day */}
+      {/* Link to apod page */}
       <section className="mt-12 text-center relative z-10">
         <a href="/apod" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 transform hover:scale-105">
           Discover Astronomy Picture of the Day
+        </a>
+      </section>
+
+      {/* Link to epic page */}
+      <section className="mt-12 text-center relative z-10">
+        <a href="/epic" className="inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 transform hover:scale-105">
+          Earth Polychromatic Imaging Data
         </a>
       </section>
     </main>
