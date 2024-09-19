@@ -14,6 +14,12 @@ export default function Sidebar() {
         <li className="mb-2">
           <Link href="/epic" className="hover:text-blue-300">EPIC Earth Images</Link>
         </li>
+        <li className="mb-2">
+          <Link href="https://github.com/JustinDewit/nasa-api-navigator" className="hover:text-blue-300">Source Code (GitHub)</Link>
+        </li>
+        <li className="mb-2">
+          <Link href="https://justindewit.com" className="hover:text-blue-300">Justindewit.com</Link>
+        </li>
       </ul>
     </nav>
   );
