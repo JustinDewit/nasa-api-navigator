@@ -14,6 +14,9 @@ export default function Sidebar() {
         <li className="mb-2">
           <Link href="/epic" className="hover:text-blue-300">EPIC Earth Images</Link>
         </li>
+        <li className="my-4">
+          <hr className="border-gray-600" />
+        </li>
         <li className="mb-2">
           <Link href="https://github.com/JustinDewit/nasa-api-navigator" className="hover:text-blue-300">Source Code (GitHub)</Link>
         </li>
