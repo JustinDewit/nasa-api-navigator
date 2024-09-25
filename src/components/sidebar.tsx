@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaHome, FaStar, FaGlobe, FaUser, FaGithub } from "react-icons/fa";
+import {
+  FaHome,
+  FaStar,
+  FaGlobe,
+  FaUser,
+  FaGithub,
+  FaRocket,
+} from "react-icons/fa";
 
 export default function Sidebar() {
   return (
@@ -50,6 +57,17 @@ export default function Sidebar() {
               <FaGlobe className="mr-3 text-green-400 group-hover:text-green-200 transition-colors duration-200" />
               <span className="group-hover:translate-x-1 transition-transform duration-200">
                 EPIC Earth Images
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/mars-photos"
+              className="hover:text-blue-300 flex items-center transition-colors duration-200 group"
+            >
+              <FaRocket className="mr-3 text-red-400 group-hover:text-red-200 transition-colors duration-200" />
+              <span className="group-hover:translate-x-1 transition-transform duration-200">
+                Mars Rover Photos
               </span>
             </Link>
           </li>
