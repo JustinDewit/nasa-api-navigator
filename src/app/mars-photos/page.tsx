@@ -133,7 +133,9 @@ export default function MarsPhotosPage() {
             )}
 
             {/* Photos */}
-            <h2 className="text-xl font-bold mb-2">Latest Photos</h2>
+            <h2 className="text-xl font-bold mb-2 text-center">
+              Latest Photos
+            </h2>
             {photos.length === 0 ? (
               <p>No latest photos found.</p>
             ) : (
