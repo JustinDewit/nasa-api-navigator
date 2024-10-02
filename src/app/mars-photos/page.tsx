@@ -29,7 +29,7 @@ type Manifest = {
   };
 };
 
-const rovers = ["Curiosity", "Opportunity", "Spirit", "Perseverance"];
+const rovers = ["Curiosity", "Perseverance"];
 
 export default function MarsPhotosPage() {
   const [selectedRover, setSelectedRover] = useState("Curiosity");
