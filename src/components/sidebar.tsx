@@ -113,3 +113,5 @@ export default function Sidebar() {
     </nav>
   );
 }
+
+//TODO: tip from Andy. Make the information on the sidebare frozen.
