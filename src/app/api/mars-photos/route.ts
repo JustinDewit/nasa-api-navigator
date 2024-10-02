@@ -8,7 +8,10 @@ export async function GET(request: Request) {
     return new NextResponse('A rover needs to be passed on', { status: 400 });
   }
 
-  const apiKey = process.env.NASA_API_KEY || 'DEMO_KEY'; // Use DEMO_KEY if NASA_API_KEY is not set
+  const apiKey = process.env.NASA_API_KEY;
+  if (!apiKey) {
+    return new NextResponse('NASA_API_KEY is not set', { status: 500 });
+  }
   const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/latest_photos?api_key=${apiKey}`;
 
   try {
