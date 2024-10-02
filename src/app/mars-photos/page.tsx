@@ -85,7 +85,7 @@ export default function MarsPhotosPage() {
           id="rover"
           value={selectedRover}
           onChange={(e) => setSelectedRover(e.target.value)}
-          className="border p-1"
+          className="border p-2 rounded bg-white text-gray-800 font-semibold cursor-pointer"
         >
           {rovers.map((rover) => (
             <option key={rover} value={rover}>
