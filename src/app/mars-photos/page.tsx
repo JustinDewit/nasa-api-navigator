@@ -49,7 +49,6 @@ export default function MarsPhotosPage() {
           throw new Error("Failed to fetch mission manifest data");
         }
         const manifestData: Manifest = await manifestRes.json();
-        console.log("Manifest Data:", JSON.stringify(manifestData, null, 2));
         setManifestData(manifestData);
 
         // Fetch latest photos data
@@ -60,7 +59,6 @@ export default function MarsPhotosPage() {
           throw new Error("Failed to fetch photos data");
         }
         const photosData = await photosRes.json();
-        console.log("Photos Data:", JSON.stringify(photosData, null, 2));
         setPhotos(photosData.latest_photos);
       } catch (error) {
         console.error(error);
