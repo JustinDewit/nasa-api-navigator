@@ -6,7 +6,10 @@ export async function GET(
 ) {
   const { rover } = params;
 
-  const apiKey = process.env.NASA_API_KEY || 'DEMO_KEY';
+  const apiKey = process.env.NASA_API_KEY;
+  if (!apiKey) {
+    return new NextResponse('NASA API key is required', { status: 400 });
+  }
   const url = `https://api.nasa.gov/mars-photos/api/v1/manifests/${rover}?api_key=${apiKey}`;
 
   try {
