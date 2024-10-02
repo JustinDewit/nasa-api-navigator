@@ -139,27 +139,29 @@ export default function MarsPhotosPage() {
             {photos.length === 0 ? (
               <p>No latest photos found.</p>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {photos.map((photo) => (
-                  <div
-                    key={photo.id}
-                    className="border rounded overflow-hidden flex flex-col"
-                  >
-                    <div className="relative pt-[75%]">
-                      <img
-                        src={photo.img_src}
-                        alt={`Mars Rover Photo ${photo.id}`}
-                        className="absolute top-0 left-0 w-full h-full object-cover"
-                      />
+              <div className="h-[calc(3*33vw)] md:h-[calc(3*25vw)] lg:h-[calc(3*20vw)] overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pr-2">
+                  {photos.map((photo) => (
+                    <div
+                      key={photo.id}
+                      className="border rounded overflow-hidden flex flex-col"
+                    >
+                      <div className="relative pt-[75%]">
+                        <img
+                          src={photo.img_src}
+                          alt={`Mars Rover Photo ${photo.id}`}
+                          className="absolute top-0 left-0 w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="p-3 bg-gray-100 text-black">
+                        <p className="text-sm font-semibold">
+                          {photo.camera.full_name}
+                        </p>
+                        <p className="text-sm">{photo.earth_date}</p>
+                      </div>
                     </div>
-                    <div className="p-3 bg-gray-100 text-black">
-                      <p className="text-sm font-semibold">
-                        {photo.camera.full_name}
-                      </p>
-                      <p className="text-sm">{photo.earth_date}</p>
-                    </div>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
             )}
           </>
