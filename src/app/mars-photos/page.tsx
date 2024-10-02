@@ -49,18 +49,19 @@ export default function MarsPhotosPage() {
           throw new Error("Failed to fetch mission manifest data");
         }
         const manifestData: Manifest = await manifestRes.json();
+        console.log("Manifest Data:", JSON.stringify(manifestData, null, 2));
         setManifestData(manifestData);
 
-        // Fetch photos data
-        const sol = manifestData.photo_manifest.max_sol; // Get the latest sol
+        // Fetch latest photos data
         const photosRes = await fetch(
-          `/api/mars-photos?sol=${sol}&rover=${selectedRover.toLowerCase()}`
+          `/api/mars-photos?rover=${selectedRover.toLowerCase()}`
         );
         if (!photosRes.ok) {
           throw new Error("Failed to fetch photos data");
         }
         const photosData = await photosRes.json();
-        setPhotos(photosData.photos);
+        console.log("Photos Data:", JSON.stringify(photosData, null, 2));
+        setPhotos(photosData.latest_photos);
       } catch (error) {
         console.error(error);
       } finally {
@@ -132,13 +133,9 @@ export default function MarsPhotosPage() {
           )}
 
           {/* Photos */}
-          <h2 className="text-xl font-bold mb-2">
-            Latest Photos (Sol {manifestData?.photo_manifest.max_sol})
-          </h2>
+          <h2 className="text-xl font-bold mb-2">Latest Photos</h2>
           {photos.length === 0 ? (
-            <p>
-              No photos found for sol {manifestData?.photo_manifest.max_sol}.
-            </p>
+            <p>No latest photos found.</p>
           ) : (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {photos.map((photo) => (

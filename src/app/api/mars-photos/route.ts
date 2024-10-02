@@ -2,11 +2,10 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
-  const sol = searchParams.get('sol') || '1000'; // Default to sol 1000 if not provided
   const rover = searchParams.get('rover') || 'curiosity'; // Default to 'curiosity' if not provided
 
   const apiKey = process.env.NASA_API_KEY || 'DEMO_KEY'; // Use DEMO_KEY if NASA_API_KEY is not set
-  const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/photos?api_key=${apiKey}&sol=${sol}`;
+  const url = `https://api.nasa.gov/mars-photos/api/v1/rovers/${rover}/latest_photos?api_key=${apiKey}`;
 
   try {
     const res = await fetch(url);
