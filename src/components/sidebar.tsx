@@ -72,15 +72,6 @@ export default function Sidebar() {
             </Link>
           </li>
         </ul>
-        <div className="my-6 relative">
-          <Image
-            src="/earth-satellite.png"
-            alt="Earth and Satellite"
-            width={200}
-            height={100}
-            className="mx-auto"
-          />
-        </div>
         <ul className="space-y-4">
           <li>
             <Link
