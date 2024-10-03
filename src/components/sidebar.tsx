@@ -11,7 +11,7 @@ import {
 
 export default function Sidebar() {
   return (
-    <nav className="bg-gradient-to-b from-blue-900 to-black text-white w-64 h-screen p-4 fixed left-0 top-0 overflow-y-auto">
+    <nav className="bg-gradient-to-b from-blue-900 to-black text-white w-64 h-screen p-4 fixed left-0 top-0 overflow-y-auto flex flex-col">
       <div className="stars absolute inset-0"></div>
       <div className="relative z-10">
         <div className="flex justify-center mb-6">
