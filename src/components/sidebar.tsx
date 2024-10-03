@@ -11,7 +11,7 @@ import {
 
 export default function Sidebar() {
   return (
-    <nav className="bg-gradient-to-b from-blue-900 to-black text-white w-64 min-h-screen p-4 relative overflow-hidden">
+    <nav className="bg-gradient-to-b from-blue-900 to-black text-white w-64 h-screen p-4 fixed left-0 top-0 overflow-y-auto">
       <div className="stars absolute inset-0"></div>
       <div className="relative z-10">
         <div className="flex justify-center mb-6">
@@ -113,5 +113,3 @@ export default function Sidebar() {
     </nav>
   );
 }
-
-//TODO: tip from Andy. Make the information on the sidebare frozen.
