@@ -72,6 +72,7 @@ export default function Sidebar() {
             </Link>
           </li>
         </ul>
+        <div className="my-4 border-t border-gray-600"></div>
         <ul className="space-y-4">
           <li>
             <Link
