@@ -1,5 +1,6 @@
 // Create a server-side API route to handle EPIC API requests
 
+// Use https://api.nasa.gov/EPIC/api/
 // Import necessary modules (e.g., NextResponse)
 
 // Securely access the EPIC API key from environment variables
