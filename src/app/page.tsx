@@ -25,7 +25,7 @@ export default function Home() {
       {/* Header section with NASA logo and title */}
       <header className="text-center">
         <Image
-          src="/nasa-logo.png"
+          src="/site-icon.png"
           alt="NASA Logo"
           width={100}
           height={100}

@@ -16,11 +16,11 @@ export default function Sidebar() {
       <div className="relative z-10">
         <div className="flex justify-center mb-6">
           <Image
-            src="/nasa-logo.png"
+            src="/site-icon.png"
             alt="NASA Logo"
             width={60}
             height={60}
-            className="rounded-full bg-white p-2"
+            className="rounded-full"
           />
         </div>
         <h2 className="text-2xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">

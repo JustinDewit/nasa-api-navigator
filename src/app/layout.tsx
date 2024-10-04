@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "NASA API Navigator",
   description: "Explore NASA's data through their public API",
   icons: {
-    icon: "/favicon.png",
+    icon: "/site-icon.png",
   },
 };
 
