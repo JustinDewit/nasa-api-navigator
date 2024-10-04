@@ -88,6 +88,9 @@
 // - Verify error handling and edge case management
 // - Check for performance issues and optimize as needed
 
+// Future TODO: When done, add a explanation piece to this page that explains
+// how i was able to fetch and display all the data.
+
 "use client";
 
 import { useState, useEffect } from "react";
