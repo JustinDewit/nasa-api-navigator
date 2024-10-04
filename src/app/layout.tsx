@@ -8,6 +8,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "NASA API Navigator",
   description: "Explore NASA's data through their public API",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
