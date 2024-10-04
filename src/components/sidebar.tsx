@@ -13,7 +13,7 @@ export default function Sidebar() {
   return (
     <nav className="bg-gradient-to-b from-blue-900 to-black text-white w-64 h-screen p-4 fixed left-0 top-0 overflow-y-auto flex flex-col">
       <div className="relative z-10">
-        <div className="flex justify-center mb-6">
+        <div className="flex items-center justify-center mb-6 space-x-4">
           <Image
             src="/site-icon.png"
             alt="NASA Logo"
@@ -21,10 +21,10 @@ export default function Sidebar() {
             height={60}
             className="rounded-full"
           />
+          <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+            NASA Navigator
+          </h2>
         </div>
-        <h2 className="text-2xl font-bold mb-6 text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
-          NASA Navigator
-        </h2>
         <ul className="space-y-4">
           <li>
             <Link
