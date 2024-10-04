@@ -1,21 +1,5 @@
-// Create a server-side API route to handle EPIC API requests
-
-// Use https://api.nasa.gov/EPIC/api/
-// Import necessary modules (e.g., NextResponse)
-
-// Securely access the EPIC API key from environment variables
-
-// Define the GET handler function:
-// - Parse query parameters from the request URL:
-//   - 'category' (default to 'natural')
-//   - 'endpoint' ('all', 'date', etc.)
-//   - 'date' (if applicable)
-// - Construct the EPIC API URL based on the parameters
-// - Append the API key to the EPIC API URL
-// - Fetch data from the EPIC API using the constructed URL
-// - Handle potential errors during the fetch
-// - Return the fetched data as a JSON response
-// - Set appropriate HTTP status codes for success and error cases
+// calls https://api.nasa.gov/EPIC/api/natural/all
+// Returns array of objects containing available dates
 
 import { NextResponse } from 'next/server';
 
