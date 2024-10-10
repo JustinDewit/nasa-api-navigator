@@ -18,7 +18,8 @@ export async function GET() {
     const datesData = await datesResponse.json();
     const dates = datesData.map((item: { date: string }) => item.date);
 
-    const latestDate = dates[0];
+    // Get the latest date
+    const latestDate = dates[0]; // Assuming the API returns dates in descending order
 
     // fetch the images for the latest date
     const imagesResponse = await fetch(`https://api.nasa.gov/EPIC/api/natural/date/${latestDate}?api_key=${NASA_API_KEY}`);
