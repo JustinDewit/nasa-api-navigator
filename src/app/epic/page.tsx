@@ -52,10 +52,10 @@ export default function EpicPage() {
   const currentImage = images[currentIndex];
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 py-8 bg-black min-h-screen text-white">
       <h1 className="text-3xl font-bold mb-6">Latest EPIC Images</h1>
       <div className="max-w-2xl mx-auto">
-        <div className="bg-white rounded-lg shadow-md overflow-hidden">
+        <div className="bg-gray-800 rounded-lg shadow-md overflow-hidden">
           <Image
             src={currentImage.imageUrl}
             alt={currentImage.caption}
@@ -64,8 +64,8 @@ export default function EpicPage() {
             className="w-full h-96 object-cover"
           />
           <div className="p-4">
-            <p className="text-sm text-gray-600">{currentImage.caption}</p>
-            <p className="text-sm text-gray-500 mt-2">
+            <p className="text-sm text-gray-300">{currentImage.caption}</p>
+            <p className="text-sm text-gray-400 mt-2">
               Image {currentIndex + 1} of {images.length}
             </p>
           </div>
@@ -73,13 +73,13 @@ export default function EpicPage() {
         <div className="flex justify-between mt-4">
           <button
             onClick={goToPreviousImage}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             Previous
           </button>
           <button
             onClick={goToNextImage}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
           >
             Next
           </button>

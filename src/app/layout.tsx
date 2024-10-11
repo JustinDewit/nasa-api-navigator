@@ -20,9 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex`}>
+      <body className={`${inter.className} flex bg-black`}>
         <Sidebar />
-        <div className="flex-1 ml-64 bg-gradient-to-b from-gray-900 to-blue-900 text-white min-h-screen">
+        <div className="flex-1 ml-64 bg-black text-white min-h-screen">
           <main className="p-8">{children}</main>
           <footer className="p-4 text-center text-sm">
             © {new Date().getFullYear()} NASA API Navigator
