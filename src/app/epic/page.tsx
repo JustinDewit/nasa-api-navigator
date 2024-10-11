@@ -105,8 +105,7 @@ export default function EpicPage() {
             onMouseEnter={() => setShowDscovrTooltip(true)}
             onMouseLeave={() => setShowDscovrTooltip(false)}
           >
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            NOAA's DSCOVR satellite
+            NOAA&apos;s DSCOVR satellite
             <InformationCircleIcon className="inline-block w-4 h-4 ml-1 text-blue-400 animate-pulse group-hover:animate-none" />
             <div
               ref={dscovrTooltipRef}
@@ -161,8 +160,7 @@ export default function EpicPage() {
             rel="noopener noreferrer"
             className="text-blue-400 hover:text-blue-300 underline"
           >
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            NASA's API
+            NASA&apos;s API
           </a>{" "}
           and displayed here, along with detailed positional and orientation
           data for each image.
@@ -308,8 +306,7 @@ export default function EpicPage() {
             </p>
           </div>
           <p className="text-xs mt-2 text-gray-400">
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            Quaternions represent the spacecraft's orientation in 3D space,
+            Quaternions represent the spacecraft&apos;s orientation in 3D space,
             providing a compact and efficient way to describe its attitude.
           </p>
           <p className="text-xs mt-2">
