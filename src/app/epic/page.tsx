@@ -101,11 +101,11 @@ export default function EpicPage() {
         <p className="mb-2">
           EPIC (Earth Polychromatic Imaging Camera) is a camera aboard{" "}
           <span
-            className="relative inline-block cursor-help text-yellow-300 group"
+            className="relative inline-block cursor-help text-blue-300 group"
             onMouseEnter={() => setShowDscovrTooltip(true)}
             onMouseLeave={() => setShowDscovrTooltip(false)}
           >
-            NOAA's DSCOVR satellite
+            NOAA&apos;s DSCOVR satellite
             <InformationCircleIcon className="inline-block w-4 h-4 ml-1 text-blue-400 animate-pulse group-hover:animate-none" />
             <div
               ref={dscovrTooltipRef}
