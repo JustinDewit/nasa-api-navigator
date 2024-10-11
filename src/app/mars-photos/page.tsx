@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 
 type Photo = {
   id: number;
@@ -147,10 +148,12 @@ export default function MarsPhotosPage() {
                       className="border rounded overflow-hidden flex flex-col"
                     >
                       <div className="relative pt-[75%]">
-                        <img
+                        <Image
                           src={photo.img_src}
-                          alt={`Mars Rover Photo ${photo.id}`}
-                          className="absolute top-0 left-0 w-full h-full object-cover"
+                          alt={`Mars Photo ${photo.id}`}
+                          width={500} // Set an appropriate width
+                          height={300} // Set an appropriate height
+                          layout="responsive"
                         />
                       </div>
                       <div className="p-3 bg-gray-100 text-black">
