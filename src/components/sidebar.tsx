@@ -75,19 +75,6 @@ export default function Sidebar() {
         <ul className="space-y-4">
           <li>
             <Link
-              href="https://justindewit.com"
-              className="hover:text-blue-300 flex items-center transition-colors duration-200 group"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaUser className="mr-3 text-purple-400 group-hover:text-purple-200 transition-colors duration-200" />
-              <span className="group-hover:translate-x-1 transition-transform duration-200">
-                Justindewit.com
-              </span>
-            </Link>
-          </li>
-          <li>
-            <Link
               href="https://github.com/JustinDewit/nasa-api-navigator"
               className="hover:text-blue-300 flex items-center transition-colors duration-200 group"
               target="_blank"
