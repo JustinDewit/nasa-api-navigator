@@ -1,6 +1,6 @@
 # NASA API Navigator
 
-![NASA API Navigator Screenshot](screenshot1.png)
+![NASA API Navigator Screenshot](/screenshot1.png)
 
 ## Project Overview
 
